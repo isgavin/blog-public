@@ -11,27 +11,18 @@
     <content type="html"><![CDATA[<h3 id="开发问题"><a href="#开发问题" class="headerlink" title="开发问题"></a>开发问题</h3><h4 id="1-list-接口有数据但无法处理"><a href="#1-list-接口有数据但无法处理" class="headerlink" title="1. list 接口有数据但无法处理"></a>1. list 接口有数据但无法处理</h4><ul><li><p>原因：<br><code>/api/list</code>这个接口请求成功后，数据拿不出来为<code>undefined</code>，赋值也做不到，<br>应该是写法问题，我真找不到原因呀~~~<br>首先 rap2mock 的数据没问题，成功带参数请求</p></li><li><p>解决方式：</p><ol><li><p>把涉及此接口相关组件全部重写检查。<br>11&#x2F;13 最后一次检查，store 编写无错误</p></li><li><p>axios 官方直接 post 请求无错误，<br>应该是@&#x2F;api 的问题，检查了下，没找到问题。</p></li><li><p>那为什么呢？我写的明明全部没错！！！</p></li></ol></li><li><p>最终解决方式<br>讲的 api 封装有问题，导致接口数接不到，直接使用 axios.post 原生请求</p></li><li><p>待完成：<br>一分完美的 axios 封装</p></li></ul><h3 id="2-v-for-的数据未显示"><a href="#2-v-for-的数据未显示" class="headerlink" title="2. v-for 的数据未显示"></a>2. v-for 的数据未显示</h3><ul><li>原因：<code>response</code>只脱掉一层，应该再脱一层</li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>笔记</category>
+      
+    </categories>
+    
     
     <tags>
       
-      <tag>笔记</tag>
-      
-      <tag>前端</tag>
+      <tag>vue</tag>
       
     </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="/2022/11/20/hello-world/"/>
-    <url>/2022/11/20/hello-world/</url>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
-    
-    
     
   </entry>
   
