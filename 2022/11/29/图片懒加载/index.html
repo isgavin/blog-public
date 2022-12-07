@@ -16,24 +16,25 @@
   <meta name="author" content="Gavin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="开发问题1. list 接口有数据但无法处理 原因：&#x2F;api&#x2F;list这个接口请求成功后，数据拿不出来为undefined，赋值也做不到，应该是写法问题，我真找不到原因呀~~~首先 rap2mock 的数据没问题，成功带参数请求  解决方式：  把涉及此接口相关组件全部重写检查。11&#x2F;13 最后一次检查，store 编写无错误  axios 官方直接 post 请求无错误，应该是@&amp;#x">
+    <meta name="description" content="图片懒加载的意思是：在图片界面没有进入到可视范围前不加载, 在没有得到图片前先显示loading图片。用于节省流量，提升网页浏览体验。步骤：  安装三方包npm install vue-lazyload  在 assets 文件内准备图片 loading.gif  在 main.js 中引入配置  12345import VueLazyload from &amp;#x27;vue-lazyload&amp;#x">
 <meta property="og:type" content="article">
-<meta property="og:title" content="项目开发遇到的问题">
-<meta property="og:url" content="http://isgavin.top/2022/11/21/%E6%88%91%E7%9A%84%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%94%B6%E9%9B%86/index.html">
+<meta property="og:title" content="图片懒加载">
+<meta property="og:url" content="http://isgavin.top/2022/11/29/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/index.html">
 <meta property="og:site_name" content="GavinBlog">
-<meta property="og:description" content="开发问题1. list 接口有数据但无法处理 原因：&#x2F;api&#x2F;list这个接口请求成功后，数据拿不出来为undefined，赋值也做不到，应该是写法问题，我真找不到原因呀~~~首先 rap2mock 的数据没问题，成功带参数请求  解决方式：  把涉及此接口相关组件全部重写检查。11&#x2F;13 最后一次检查，store 编写无错误  axios 官方直接 post 请求无错误，应该是@&amp;#x">
+<meta property="og:description" content="图片懒加载的意思是：在图片界面没有进入到可视范围前不加载, 在没有得到图片前先显示loading图片。用于节省流量，提升网页浏览体验。步骤：  安装三方包npm install vue-lazyload  在 assets 文件内准备图片 loading.gif  在 main.js 中引入配置  12345import VueLazyload from &amp;#x27;vue-lazyload&amp;#x">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://isgavin.top/img/default.jpg">
-<meta property="article:published_time" content="2022-11-21T03:28:26.301Z">
-<meta property="article:modified_time" content="2022-11-23T08:30:48.417Z">
+<meta property="article:published_time" content="2022-11-29T10:06:47.000Z">
+<meta property="article:modified_time" content="2022-11-29T10:42:56.238Z">
 <meta property="article:author" content="Gavin">
-<meta property="article:tag" content="vue">
+<meta property="article:tag" content="三方库">
+<meta property="article:tag" content="图片懒加载">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://isgavin.top/img/default.jpg">
   
   
   
-  <title>项目开发遇到的问题 - GavinBlog</title>
+  <title>图片懒加载 - GavinBlog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="项目开发遇到的问题"></span>
+            <span id="subtitle" data-typed-text="图片懒加载"></span>
           
         </div>
 
@@ -209,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-21 11:28" pubdate>
-          2022年11月21日 上午
+        <time datetime="2022-11-29 18:06" pubdate>
+          2022年11月29日 晚上
         </time>
       </span>
     
@@ -221,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          319 字
+          352 字
         
       </span>
     
@@ -270,32 +271,23 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">项目开发遇到的问题</h1>
+            <h1 style="display: none">图片懒加载</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="开发问题"><a href="#开发问题" class="headerlink" title="开发问题"></a>开发问题</h3><h4 id="1-list-接口有数据但无法处理"><a href="#1-list-接口有数据但无法处理" class="headerlink" title="1. list 接口有数据但无法处理"></a>1. list 接口有数据但无法处理</h4><ul>
-<li><p>原因：<br><code>/api/list</code>这个接口请求成功后，数据拿不出来为<code>undefined</code>，赋值也做不到，<br>应该是写法问题，我真找不到原因呀~~~<br>首先 rap2mock 的数据没问题，成功带参数请求</p>
-</li>
-<li><p>解决方式：</p>
+                <p>图片懒加载的意思是：<br>在图片界面没有进入到可视范围前不加载, 在没有得到图片前先显示loading图片。用于节省流量，提升网页浏览体验。<br><strong>步骤：</strong></p>
 <ol>
-<li><p>把涉及此接口相关组件全部重写检查。<br>11&#x2F;13 最后一次检查，store 编写无错误</p>
+<li><p>安装三方包<code>npm install vue-lazyload</code></p>
 </li>
-<li><p>axios 官方直接 post 请求无错误，<br>应该是@&#x2F;api 的问题，检查了下，没找到问题。</p>
+<li><p>在 <em>assets</em> 文件内准备图片 <em>loading.gif</em></p>
 </li>
-<li><p>那为什么呢？我写的明明全部没错！！！</p>
+<li><p>在 <em>main.js</em> 中引入配置</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-keyword">import</span> <span class="hljs-title class_">VueLazyload</span> <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;vue-lazyload&#x27;</span><br><span class="hljs-keyword">import</span> loading <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@/assets/images/loading.gif&#x27;</span> <span class="hljs-comment">//未加载得到图片之前的loading图片</span><br><span class="hljs-title class_">Vue</span>.<span class="hljs-title function_">use</span>(<span class="hljs-title class_">VueLazyload</span>, &#123; <span class="hljs-comment">// 内部自定义了一个指令v-lazy</span><br>loading,<br>&#125;)<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>将图片<code>src</code>换成<code>v-lazy=&quot;Img&quot;</code>即可</p>
 </li>
 </ol>
-</li>
-<li><p>最终解决方式<br>讲的 api 封装有问题，导致接口数接不到，直接使用 axios.post 原生请求</p>
-</li>
-<li><p>待完成：<br>一分完美的 axios 封装</p>
-</li>
-</ul>
-<h3 id="2-v-for-的数据未显示"><a href="#2-v-for-的数据未显示" class="headerlink" title="2. v-for 的数据未显示"></a>2. v-for 的数据未显示</h3><ul>
-<li>原因：<code>response</code>只脱掉一层，应该再脱一层</li>
-</ul>
 
                 
               </div>
@@ -314,7 +306,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%AC%94%E8%AE%B0/" class="category-chain-item">笔记</a>
+  <a href="/categories/%E5%89%8D%E7%AB%AF/" class="category-chain-item">前端</a>
   
   
 
@@ -329,7 +321,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/vue/">#vue</a>
+        <a href="/tags/%E4%B8%89%E6%96%B9%E5%BA%93/">#三方库</a>
+      
+        <a href="/tags/%E5%9B%BE%E7%89%87%E6%87%92%E5%8A%A0%E8%BD%BD/">#图片懒加载</a>
       
     </div>
   
@@ -341,8 +335,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>项目开发遇到的问题</div>
-      <div>http://isgavin.top/2022/11/21/我的开发问题收集/</div>
+      <div>图片懒加载</div>
+      <div>http://isgavin.top/2022/11/29/图片懒加载/</div>
     </div>
     <div class="license-meta">
       
@@ -354,7 +348,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月21日</div>
+          <div>2022年11月29日</div>
         </div>
       
       
@@ -392,9 +386,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/11/24/docker%E5%AD%A6%E4%B9%A0/" title="docker 学习">
+                      <a href="/2022/11/29/%E8%B7%AF%E7%94%B1%E6%87%92%E5%8A%A0%E8%BD%BD/" title="路由懒加载">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">docker 学习</span>
+                        <span class="hidden-mobile">路由懒加载</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -402,8 +396,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/11/09/mock%E6%8E%A5%E5%8F%A3/" title="mockjs的使用">
-                        <span class="hidden-mobile">mockjs的使用</span>
+                      <a href="/2022/11/29/%E5%BC%80%E5%8F%91%E5%B0%8F%E6%8A%80%E5%B7%A7/" title="开发小技巧">
+                        <span class="hidden-mobile">开发小技巧</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
